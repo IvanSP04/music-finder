@@ -1,7 +1,8 @@
-const CACHE_NAME = 'music-finder-v1';
+const CACHE_NAME = 'music-finder-v2';
 
 const urlsToCache = [
   '/',
+  '/descubrir',
   '/favoritos',
   '/manifest.json'
 ];

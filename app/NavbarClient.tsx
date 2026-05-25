@@ -14,6 +14,10 @@ export default function NavbarClient() {
           <span>🔍</span>
           Buscar
         </Link>
+        <Link href="/descubrir" className={pathname === "/descubrir" ? "activo" : ""}>
+          <span>🎲</span>
+          Descubrir
+        </Link>
         <Link href="/favoritos" className={pathname === "/favoritos" ? "activo" : ""}>
           <span>❤️</span>
           Favoritos
