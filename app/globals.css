@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1db954;
+  --background: #121212;
+  --surface: #1e1e1e;
+  --surface2: #2a2a2a;
+  --text: #ffffff;
+  --text-secondary: #b3b3b3;
+  --border: #333333;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.navbar a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 11px;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.navbar a.activo {
+  color: var(--primary);
+}
+
+.navbar a span {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 16px 80px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  margin-top: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 12px 20px;
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--primary);
+}
+
+.search-box button {
+  background: var(--primary);
+  border: none;
+  border-radius: 24px;
+  padding: 12px 20px;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.song-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: background 0.2s;
+}
+
+.song-card:hover {
+  background: var(--surface2);
+}
+
+.song-card img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.song-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.song-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-info p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-fav {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+.titulo-pagina {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.sin-resultados {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 60px 20px;
+  font-size: 15px;
+}
+
+.preview-btn {
+  background: var(--surface2);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: var(--primary);
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
